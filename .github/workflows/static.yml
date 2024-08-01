@@ -46,4 +46,4 @@ jobs:
         if: steps.Deploy-to-GitHub-Pages.outcome == 'failure'
         run: echo "Deployment failed. Please check the logs for details."
       - name: Print URL
-        run: echo steps.deployment.outputs.page_ur
+        run: echo steps.deployment.outputs.page_url
