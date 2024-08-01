@@ -41,9 +41,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        continue-on-error: true
-      - name: Handle deployment error
-        if: steps.Deploy-to-GitHub-Pages.outcome == 'failure'
-        run: echo "Deployment failed. Please check the logs for details."
-      - name: Print URL
-        run: echo steps.deployment.outputs.page_url
